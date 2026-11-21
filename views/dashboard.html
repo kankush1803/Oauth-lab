@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Google OAuth Authentication</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Dashboard</h1>
+      <p class="subtitle">Welcome to your account dashboard</p>
+    </header>
+
+    <main>
+      <section class="profile-card">
+        <div class="profile-header">
+          <img id="profilePicture" src="" alt="Profile picture" class="profile-picture" />
+          <div class="profile-info">
+            <h2 id="profileName">Loading...</h2>
+            <p id="profileEmail" class="profile-email"></p>
+            <p id="profileId" class="profile-id"></p>
+            <p id="profileStatus" class="profile-status">Authenticated: Yes</p>
+          </div>
+        </div>
+
+        <div class="profile-actions">
+          <form action="/auth/logout" method="POST">
+            <button type="submit" class="btn btn-logout">Logout</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Google OAuth Authentication Demo</p>
+    </footer>
+  </div>
+
+  <script>
+    // The dashboard data is populated server-side by injecting the user
+    // profile into this page. For a beginner-friendly setup, the HTML is
+    // served as a static file. A small enhancement could pass user data via
+    // a template engine or query parameters; here we keep it simple and rely
+    // on the session to enforce access (handled by ensureAuthenticated).
+  </script>
+</body>
+</html>
